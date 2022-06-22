@@ -1,0 +1,485 @@
+@font-face {
+  font-family: Alata;
+  src: url("../fonts/Alata-Regular.ttf");
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: Alata;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #bc3684;
+  outline: none;
+  border-radius: 20px;
+}
+
+:root {
+  --beauty-pink: #c86ea2;
+  --kitty-pink: #e96fc2;
+  --soft-pink: #FFCEEF;
+}
+
+.flex {
+  display: flex;
+}
+
+/* hero section  */
+
+div.hero-bg {
+  background: url("../images/hero-bg.png") center center no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  height: 100vh;
+}
+
+/* navbar  */
+nav {
+  margin: auto 1rem;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Alata;
+  color: var(--beauty-pink);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--beauty-pink);
+  letter-spacing: 1.2px;
+  display: inline-block;
+  position: relative;
+}
+
+a.link-underline-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--beauty-pink);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+a.link-underline-hover:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 50% 100%;
+  }
+}
+
+nav ul li button#nav-btn {
+  background: url("../images/paw-bg.png");
+  padding: 1rem;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-family: Alata;
+  letter-spacing: 0.12em;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    -10px -10px 12px 0px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 10s linear infinite;
+  transition: ease-in-out 0.3s;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+nav ul li button#nav-btn:hover {
+  box-shadow: 7px 7px 24px #ff75c8, -7px -7px 24px #e67fba;
+  animation: animatedBackground 2s linear infinite;
+
+}
+
+div.hero-bg div.hero-content {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.551);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  margin: 2rem 6rem;
+  padding: 3rem;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--beauty-pink);
+  font-family: Alata;
+}
+
+div.hero-bg div.hero-content div.left button.whitepaper-btn {
+  background: var(--beauty-pink);
+  padding: 1rem 2rem;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-family: Alata;
+  letter-spacing: 0.12em;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    -10px -10px 12px 0px rgba(255, 255, 255, 0.1);
+}
+
+/* how it works  */
+section#how-it-works {
+  display: flex;
+  color: var(--beauty-pink);
+  justify-content: space-between;
+  align-items: center;
+  background: url("../images/how-it-works-bg.png") center center no-repeat;
+  background-size: cover;
+  padding: 1rem 6rem;
+  font-family: Alata;
+  font-size: 1.3rem;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 30px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+section#how-it-works div.right {
+  animation: floating 2.5s ease-in-out infinite;
+}
+
+section.twitter-posts {
+  background: var(--beauty-pink);
+  color: #fff;
+  padding: 2rem 0;
+  position: relative;
+  background: url("../images/twitter-posts-bg.png") center center no-repeat;
+  background-size: cover;
+  object-fit: contain;
+}
+
+section.twitter-posts div.header-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section.twitter-posts div.header-content div.left p {
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+section.twitter-posts div.header-content div.left h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+}
+
+section.twitter-posts div.header-content div.right button {
+  box-shadow: 8px 8px 13px #86496d, -8px -8px 13px #ff91d7;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-family: Alata;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: var(--beauty-pink);
+  font-weight: 900;
+}
+
+section.twitter-posts div.twitter-post-container {
+  height: 500px;
+  /* background: red; */
+  margin: 1rem 6rem;
+  border-radius: 10px;
+  background: #e1e1e187;
+  
+}
+
+section.twitter-posts img {
+  position: absolute;
+  top: 205px;
+  left: 150px;
+}
+
+section.twitter-posts div.twitter-post-container div.tweet-group {
+  height: 400px;
+  overflow-y: auto;
+  float: right;
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem 2.5rem;
+  padding-right: 5rem;
+}
+
+section.twitter-posts
+  div.twitter-post-container
+  div.tweet-group
+  div.tweet-card {
+  width: 300px;
+}
+
+section#roadmap {
+  background: url("../images/roadmap-bg.png") center center no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--kitty-pink);
+  padding: 2rem 5rem;
+}
+
+/* join community section  */
+
+section#join-community {
+  background: url("../images/join-community-bg.png") center center no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  padding: 7rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 10rem;
+}
+
+section#join-community div.community-content {
+  width: 75%;
+  padding: 5rem;
+  margin: 2rem;
+  border-radius: 10px;
+  background: #e96fc24f;
+  border: 1px solid #e1e1e1;
+}
+
+section#join-community div.community-content h1{
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+    /* box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 30px #ff4da6) drop-shadow(0 0 40px #ff4da6) drop-shadow(0 0 50px #ff4da6) drop-shadow(0 0 60px #ff4da6);
+  }
+}
+
+section#join-community div.social-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+section#join-community div.social-icons a img{
+  display: inline-block;
+  transition: ease-in-out 0.2s;
+}
+
+section#join-community div.social-icons a img:hover{
+  /* transform: rotate(360deg);
+  transition:  1.0s ease all; */
+  animation: rotate .5s infinite alternate;
+}
+
+/* purchase guide  */
+
+section#purchase-guide {
+  background: #212121;
+  padding: 0 2rem;
+  z-index: 10;
+}
+
+section#purchase-guide div.content {
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section#purchase-guide div.content div.left{
+  animation: floating 3s ease-in-out infinite;
+}
+
+section#purchase-guide div.content div.right{
+  font-size: 1.4rem;
+}
+
+section#purchase-guide div.content div.right p:first-child{
+  color: var(--soft-pink);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+section#purchase-guide div.content div.right div.steps p{
+  font-size: 1.5rem;
+}
+
+section#purchase-guide div.content div.right div.steps span{
+  color: var(--kitty-pink);
+  font-weight: 900;
+  text-transform: uppercase;
+  
+}
+
+section#purchase-guide div.content div.right h1{
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+/* blogs section  */
+section#latest-blog-posts {
+  padding: 3rem 1rem;
+  background: url("../images/blogs-bg.png") center center no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  padding-top: 10rem;
+}
+
+section#latest-blog-posts h1{
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: var(--beauty-pink);
+}
+
+section#latest-blog-posts div.blogs {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#latest-blog-posts div.blogs div.blog {
+  padding: 0.7rem;
+  margin: 1rem;
+  background: #f9f9f985;
+  border-radius: 10px;
+}
+
+section#latest-blog-posts div.blogs div.blog h2{
+  color: var(--beauty-pink);
+}
+
+section#latest-blog-posts div.blogs div.blog p.name-date{
+  color: var(--kitty-pink);
+
+}
+
+section#latest-blog-posts div.blogs div.blog a.read-more {
+  text-decoration: none;
+  color: var(--kitty-pink);
+}
+
+section#latest-blog-posts div.read-more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#latest-blog-posts div.read-more-btn button {
+  box-shadow: -10px 10px 12px 0 #ffffff1d, 4px 4px 10px 0 #0000001b;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  border: none;
+  font-family: Alata;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  font-size: 1.3rem;
+  background: var(--beauty-pink);
+  color: #fff;
+  font-weight: 900;
+  margin: 4rem auto;
+}
+
+section#disclosure {
+  padding: 3rem;
+  background: url("../images/how-it-works-bg.png") center center no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  height: 70vh;
+  position: relative;
+}
+
+section#disclosure div.disclosure-dialog {
+  background: url("../images/chat-box.png") center center no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  width: 700px;
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+section#disclosure div.disclosure-dialog p {
+  margin: 2rem;
+  padding: 0.7rem 2rem;
+  color: #fff;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+section#disclosure img {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+
+footer {
+  background: #333333;
+  color: #e1e1e181;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+footer p{
+  font-size: 1.5rem;
+}
+
+footer a{
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+footer img{
+  opacity: 0.6;
+  transition: ease-in-out 0.3s;
+}
+
+footer img:hover{
+  opacity: 1;
+}
+
