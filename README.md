@@ -1,4 +1,5 @@
 # [Cute Kitty](https://www.cutekitty.org/)
+Cute Kitty is a token created on a decentralized blockchain platform and is devoted to the prevention of animal cruelty. Every time a Cute Kitty is sent you donate to help no-kill animal shelters.
 
 ## Frontend built on
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
